@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>{{ title }}</h2>
+<div mat-dialog-content>
+  <form class="form-container">
+    <mat-form-field appearance="outline">
+      <mat-label>First name</mat-label>
+      <input matInput placeholder="First name" name="patientFirstname" [(ngModel)]="user.patientFirstname">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Last name</mat-label>
+      <input matInput placeholder="Last name" name="patientLastName" [(ngModel)]="user.patientLastName">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Contact number</mat-label>
+      <input matInput placeholder="Contact number" name="contactNumber" [(ngModel)]="user.contactNumber">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button (click)="close(user)" color="primary">{{btnActionText}}</button>
+</div>

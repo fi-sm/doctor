@@ -1,0 +1,14 @@
+header {
+  display: flex;
+  place-content: space-between;
+  padding: 10px;
+  color: #f6f7f9;
+
+  a {
+    text-decoration: none;
+    &:visited,
+    &:active {
+      color: white;
+    }
+  }
+}

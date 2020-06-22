@@ -1,0 +1,11 @@
+<section class="form">
+  <h2>Login To Your Account</h2>
+  <div class="loginbox">
+    <p *ngIf="anyErrorOccured" class="error-msg">Please check your username and password</p>
+    <input #name="ngModel" [ngClass]="{'error': name.invalid && name.touched }"
+      placeholder="Username" type="email" id="username" [(ngModel)]="username" email required />
+    <input #pass="ngModel" placeholder="Password" type="password" id="password" [(ngModel)]="password" required
+    [ngClass]="{'error': pass.invalid && pass.touched }"/>
+    <button id="submit" (click)="doLogin(username, password)" [disabled]="!name.valid || !pass.valid">Login</button>
+  </div>
+</section>

@@ -1,0 +1,9 @@
+{
+    "/sapi/*": {
+        "target": "http://localhost:8877",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}
+
+
